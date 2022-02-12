@@ -28,15 +28,15 @@
         </div>
     </div>
 
-    <div class="container mt-5" style="display: flex; justify-content: space-between;">
-        <div class="item-card" style="border: 1px solid rgb(224, 219, 228); padding: 10px 20px; margin-right: 15px; ">
-            <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, praesentium.</p>
-            <h5>price: <span style="font-size: 14px;">$1000.99</span></h5>
+    <div class="container mt-5" style="display: flex;  flex-direction: column; justify-content: center; width: 50%; margin-bottom: 10px;">
+        <div class="item-card" style="border: 1px solid rgb(224, 219, 228); padding: 10px 20px; margin-right: 15px; " *ngFor="let product of productList">
+            <img src={{product.image}} alt="" style="width: 30px;">
+            <h4>{{product.title}}</h4>
+            <p>{{product.description}}</p>
+            <h5>price: <span style="font-size: 14px;">${{product.price}}</span></h5>
             <button class="btn btn-primary" style="width: 60%; ">Add to Cart</button>
         </div>
-        <div class="item-card" style="border: 1px solid rgb(224, 219, 228); padding: 10px 20px; margin-right: 15px;">
+        <!-- <div class="item-card" style="border: 1px solid rgb(224, 219, 228); padding: 10px 20px; margin-right: 15px;">
             <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
             <h4>Lorem ipsum dolor sit amet.</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, praesentium.</p>
@@ -49,6 +49,6 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, praesentium.</p>
             <h5>price: <span style="font-size: 14px;">$1000.99</span></h5>
             <button class="btn btn-primary" style="width: 60%; ">Add to Cart</button>
-        </div>
+        </div> -->
     </div>
 </div>
