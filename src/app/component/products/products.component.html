@@ -28,13 +28,15 @@
         </div>
     </div>
 
-    <div class="container mt-5" style="display: flex;  flex-direction: column; justify-content: center; width: 50%; margin-bottom: 10px;">
-        <div class="item-card" style="border: 1px solid rgb(224, 219, 228); padding: 10px 20px; margin-right: 15px; " *ngFor="let product of productList">
+    <div class="container mt-5"
+        style="display: flex;  flex-direction: column; justify-content: center; width: 50%; margin-bottom: 10px;">
+        <div class="item-card" style="border: 1px solid rgb(224, 219, 228); padding: 10px 20px; margin-right: 15px; "
+            *ngFor="let product of productList">
             <img src={{product.image}} alt="" style="width: 30px;">
             <h4>{{product.title}}</h4>
             <p>{{product.description}}</p>
             <h5>price: <span style="font-size: 14px;">${{product.price}}</span></h5>
-            <button class="btn btn-primary" style="width: 60%; ">Add to Cart</button>
+            <button class="btn btn-primary" style="width: 60%;" (click)=addToCart(product)>Add to Cart</button>
         </div>
         <!-- <div class="item-card" style="border: 1px solid rgb(224, 219, 228); padding: 10px 20px; margin-right: 15px;">
             <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
